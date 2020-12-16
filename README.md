@@ -16,8 +16,9 @@ The circom circuits can be found in [circuits](https://github.com/hermeznetwork/
 
 For this ceremony we used the tag `phase2ceremony_1` with commit value  `16f791efd259f2b158bc48b1911ab94ac1e53d36`
 
-For contributing to the ceremony see: [CONTRIBUTE.md]()
-For verifying the ceremony see: [VERIFY.md]()
+For contributing to the ceremony see: [CONTRIBUTE.md](CONTRIBUTE.md)
+
+For verifying the ceremony see: [VERIFY.md](VERIFY.md)
 
 ## Contributions
 
