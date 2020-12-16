@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
 # Hermez First Phase 2 ceremony attestation
 
 **Contribution Number:**    0001
@@ -24,7 +27,7 @@ c3370068 758209b6 cad7bd75 a6ec95dc
 79ed6e54 33088783 bab73475 96f6dafc
 ````
 
----
+- ---
 
 **Original File Name:** `circuit-2000-32-256-64_hez1_0000.zkey`
 
@@ -35,7 +38,7 @@ c3370068 758209b6 cad7bd75 a6ec95dc
 872ead48 29233643 66801a26 9665ece7
 6e61de5f 48eb0407 34b4aee1 90dd93c8
 ````
----
+- ---
 
 **Response File Name:** `circuit-2000-32-256-64_hez1_0001.zkey`
 
@@ -64,7 +67,7 @@ b3c59f9b eb74cd2e 13f7ce35 7f2b18fd
 08dc9f7f 1abf46f6 98f6a5c4 a8b2ce98
 ````
 
----
+- ---
 
 **Original File Name:** `circuit-376-32-256-64_hez1_0000.zkey`
 
@@ -75,7 +78,7 @@ b3c59f9b eb74cd2e 13f7ce35 7f2b18fd
 b4f1c9ee 2ffafa26 62190a00 5fc29e39
 7f10af08 3d606a0a fa43d006 fb69fc8b
 ````
----
+- ---
 
 **Response File Name:** `circuit-376-32-256-64_hez1_0001.zkey`
 
@@ -105,7 +108,7 @@ f6231eeb d3a3e47c c7745379 34b16062
 42f67e89 893e2b21 277e7019 55020b8c
 ````
 
----
+- ---
 
 **Original File Name:** `withdraw_hez1_0000.zkey`
 
@@ -116,7 +119,7 @@ d8005cba 95437a8a c8cdb9f7 dca720d0
 2d3ad452 2c15fd54 7bd49555 9cb9af0b
 5b008d07 59957d7d 49fa89de 645a9fb2
 ````
----
+- ---
 
 **Response File Name**: `withdraw_hez1_0001.zkey`
 
@@ -140,3 +143,14 @@ feb5b2ea 69fba9ae 3691fb61 d84381fc
 
 
 
+-----BEGIN PGP SIGNATURE-----
+
+iQEzBAEBCAAdFiEExy+ay0WIhJXpBVTZdIDIDBvkMRIFAl/aZeEACgkQdIDIDBvk
+MRLsxgf/R8nPrxsJVo3XginHU92khVqvzB1w88Kt2qWxefPe+b1LwOTEIpnbk9Ad
+J5XnJvcDmdiiQ9HV4USsN1VT9JuZRHBj+iJpSFuuxVCPnXC9iFu4cFMlQOEfgk7C
+TSiP4LHIoXPN4Pc0K+/PpVB4lad238rWAKN6SFUnFXsbqmVH39P773PFAbRJYRiJ
+fsn5q1jg6NC3nTz8WqnMP3Iyn+7vnoB0pBv8sbCKFCCEqWTGawZpe7yJlPrZfbZm
+8bXe8r9HMa1r1M/2tJKoIzWDdC/Do5HIAmRAUMqwfDmjL+AijL58vn3IW6U0Eack
+70zld2f66JsvGFSlkhSw75SGl6Cu/w==
+=gLKp
+-----END PGP SIGNATURE-----
