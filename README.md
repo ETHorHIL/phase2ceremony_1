@@ -27,7 +27,7 @@ For verifying the ceremony see: [VERIFY.md](VERIFY.md)
 | Atestation<br>&nbsp; | Contribution File<br>&nbsp; | Contributor<br>&nbsp; | Contribution Hash &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
 |:-----|:------------ |:-----|:--------------------------------------|
 | 0000_initial | [circuit-2000-32-256-64_hez1_0000.zkey](https://hermez.s3-eu-west-1.amazonaws.com/circuit-2000-32-256-64_hez1_0000.zkey)     | |
-| [0001_jordi](https://github.com/hermeznetwork/phase2ceremony_1/tree/main/0001_jordi) | [circuit-2000-32-256-64_hez1_0001.zkey](https://hermez.s3-eu-west-1.amazonaws.com/circuit-2000-32-256-64_hez1_0001.zkey)     | [Jordi](https://keybase.io/jbaylina)  | `00000000 00000000`<br>`00000000 00000000`<br>`00000000 00000000`<br>`00000000 00000000`<br>`00000000 00000000`<br>`00000000 00000000`<br>`00000000 00000000`<br>`00000000 00000000`|
+| [0001_jordi](https://github.com/hermeznetwork/phase2ceremony_1/tree/main/0001_jordi) | [circuit-2000-32-256-64_hez1_0001.zkey](https://hermez.s3-eu-west-1.amazonaws.com/circuit-2000-32-256-64_hez1_0001.zkey)     | [Jordi](https://keybase.io/jbaylina)  | `a8393a38 b4f3607a`<br>`ca08a629 92e1ac25`<br>`c4274c2f 7fd1828f`<br>`f93c655d 31d7e4cf`<br>`39731c5e 2e9be49b`<br>`c46580a4 4ab291a6`<br>`08ed8beb 1a1e3215`<br>`a826485e 0ea06b38` |
 
 ### 376 Tx Circuit
 
