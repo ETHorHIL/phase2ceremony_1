@@ -1,10 +1,12 @@
 # Hermez First Phase 2 ceremony attestation
 
+**Contribution Number:**    yyyy
+
 **Name:**    [Your Name]
 
 **Date:**    [Moth XXth, 202?]
 
-**Contribution Number:**    yyyy
+**Location:**   [City, State]
 
 **Device:** [Device you used to ron the trusted setup]
 
@@ -27,7 +29,7 @@ c3370068 758209b6 cad7bd75 a6ec95dc
 
 **Original File Name:** `circuit-2000-32-256-64_hez1_xxxx.zkey`
 
-**Original File blake2b hash:**
+**Original File Blake2b hash:**
 ````
 00000000 00000000 00000000 00000000
 00000000 Substitute with   00000000
@@ -39,7 +41,7 @@ c3370068 758209b6 cad7bd75 a6ec95dc
 
 **Response File Name:** `circuit-2000-32-256-64_hez1_yyyy.zkey`
 
-**Response File Hash:**
+**Response File Blake2b Hash:**
 ````
 00000000 00000000 00000000 00000000
 00000000 Substitute with   00000000
@@ -69,7 +71,7 @@ b3c59f9b eb74cd2e 13f7ce35 7f2b18fd
 
 **Original File Name:** `circuit-376-32-256-64_hez1_xxxx.zkey`
 
-**Original File blake2b hash:**
+**Original File Blake2b hash:**
 ````
 00000000 00000000 00000000 00000000
 00000000 Substitute with   00000000
@@ -81,7 +83,7 @@ b3c59f9b eb74cd2e 13f7ce35 7f2b18fd
 
 **Response File Name:** `circuit-376-32-256-64_hez1_yyyy.zkey`
 
-**Response File Hash:**
+**Response File Blake2b Hash:**
 ````
 00000000 00000000 00000000 00000000
 00000000 Substitute with   00000000
@@ -111,7 +113,7 @@ f6231eeb d3a3e47c c7745379 34b16062
 
 **Original File Name:** `withdraw_hez1_xxxx.zkey`
 
-**Original File blake2b hash:**
+**Original File Blake2b hash:**
 ````
 00000000 00000000 00000000 00000000
 00000000 Substitute with   00000000
@@ -123,7 +125,7 @@ f6231eeb d3a3e47c c7745379 34b16062
 
 **Response File Name:** `withdraw_hez1_yyyy.zkey`
 
-**Response File Hash:**
+**Response File Blake2b Hash:**
 ````
 00000000 00000000 00000000 00000000
 00000000 Substitute with   00000000
