@@ -1,15 +1,20 @@
 # Hermez First Phase 2 ceremony attestation
 
-*Name*:    Jordi Baylina
-*Date*:    December 16th, 2020
-*Contribution Number*:    0001
-*Device*: Own server AMD with 256Gb of mem.
-*Software Used*: snarkjs@v0.3.45 commit 426480d5207362bd1bd426e558c9e5b8f8b1c8df
-*Measures Taken*: Nothing special. It's just my trusted envirotmen.
+**Name:**    Jordi Baylina
+
+**Date:**    December 16th, 2020
+
+**Contribution Number:**    0001
+
+**Device:** Own server AMD with 256Gb of mem.
+
+**Software Used:** snarkjs@v0.3.45 commit 426480d5207362bd1bd426e558c9e5b8f8b1c8df
+
+**Measures Taken:** Nothing special. It's just my trusted envirotmen.
 
 
 ## 2000 TXs Circuit
-*Hash of the circuit*:
+**Hash of the circuit:**
 ````
 71d82bff bd8538c2 3563e778 93fde8e7
 dea99f07 613a88a0 c6a286de 4decfb39
@@ -19,8 +24,9 @@ c3370068 758209b6 cad7bd75 a6ec95dc
 
 ---
 
-*Original File Name*: `circuit-2000-32-256-64_hez1_0000.zkey`
-*Original File blake2b hash*:
+**Original File Name:** `circuit-2000-32-256-64_hez1_0000.zkey`
+
+**Original File blake2b hash:**
 ````
 02f10f4f 6281762c 6995156d 6c172209
 864370d1 57c39b83 8b121a2a 5f9985d6
@@ -29,8 +35,9 @@ c3370068 758209b6 cad7bd75 a6ec95dc
 ````
 ---
 
-*Response File Name*: `circuit-2000-32-256-64_hez1_0001.zkey`
-*Response File Hash*:
+**Response File Name:** `circuit-2000-32-256-64_hez1_0001.zkey`
+
+**Response File Hash:**
 ````
 8818e4fa 4b38936c c1fddf9d 6a89b210
 81e66367 061a1343 c33f1c9b 1b2dcf16
@@ -38,12 +45,12 @@ c3370068 758209b6 cad7bd75 a6ec95dc
 7d5df343 80b878eb 88385f72 d4544f8c
 ````
 
-*Contribution Hash:*
+**Contribution Hash:**
 ````
 ````
 
 ## 376 TXs Circuit
-*Hash of the circuit*:
+**Hash of the circuit:**
 ````
 d357a1ec f80bbc0e ba06ae34 4a40c688
 79026153 c5a1c550 28b6ac02 3789d26c
@@ -53,8 +60,9 @@ b3c59f9b eb74cd2e 13f7ce35 7f2b18fd
 
 ---
 
-*Original File Name*: `circuit-376-32-256-64_hez1_0000.zkey`
-*Original File blake2b hash*:
+**Original File Name:** `circuit-376-32-256-64_hez1_0000.zkey`
+
+**Original File blake2b hash:**
 ````
 5888619f 2bdd7b61 50f35363 6fbf22d1
 77b4b81d 128670a9 68ba6f10 649b4d67
@@ -63,8 +71,9 @@ b4f1c9ee 2ffafa26 62190a00 5fc29e39
 ````
 ---
 
-*Response File Name*: `circuit-376-32-256-64_hez1_0001.zkey`
-*Response File Hash*:
+**Response File Name:** `circuit-376-32-256-64_hez1_0001.zkey`
+
+**Response File Hash:**
 ````
 8cc2b10c 3c066b82 b6ba3dba 0d2ddbfa
 82e31ee1 7b7b671b c6eacdd1 ae0ef0cf
@@ -72,7 +81,7 @@ b4f1c9ee 2ffafa26 62190a00 5fc29e39
 8f0c8368 deca881e 85d50bf6 788ac36a
 ````
 
-*Contribution Hash:*
+**Contribution Hash:**
 ````
     f69ea0f7 251ed117 6d3e2b05 e1e814c4
     fc7d764f 83a5f00c c07c0ee1 0140cb46
@@ -82,7 +91,7 @@ b4f1c9ee 2ffafa26 62190a00 5fc29e39
 
 
 ## Withdraw Circuit
-*Hash of the circuit*:
+**Hash of the circuit:**
 ````
 ec15023b 4b03e104 a8b8f620 e48b6f8a
 f6231eeb d3a3e47c c7745379 34b16062
@@ -92,8 +101,9 @@ f6231eeb d3a3e47c c7745379 34b16062
 
 ---
 
-*Original File Name*: `withdraw_hez1_0000.zkey`
-*Original File blake2b hash*:
+**Original File Name:** `withdraw_hez1_0000.zkey`
+
+**Original File blake2b hash:**
 ````
 d8005cba 95437a8a c8cdb9f7 dca720d0
 0084e4f6 02687f59 5ecd3d60 a36ef5ce
@@ -102,8 +112,9 @@ d8005cba 95437a8a c8cdb9f7 dca720d0
 ````
 ---
 
-*Response File Name*: `withdraw_hez1_0001.zkey`
-*Response File Hash*:
+**Response File Name**: `withdraw_hez1_0001.zkey`
+
+**Response File Hash:**
 ````
 2c5c6c09 8899676f 1d2b56d3 3e578c15
 3499d9bb 2b632bdd 4781a739 865902cf
@@ -111,7 +122,7 @@ feb5b2ea 69fba9ae 3691fb61 d84381fc
 7d083bc4 5f82026b c947eec3 3376fdbe
 ````
 
-*Contribution Hash:*
+**Contribution Hash:**
 ````
     25b83ba8 1db23b31 ddd54f03 cfa7723c
     2229320c a075b8fc 8d04b186 acd140db
