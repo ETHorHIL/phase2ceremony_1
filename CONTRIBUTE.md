@@ -9,28 +9,31 @@ You can also reach us in the [Hermez Telegram group](https://t.me/hermez_network
 
 A machine with 4 cores and 16Gb would do the work, but we recomend a bigger machine to process the ceremony faster.
 
-In this tutorial I'll describe all the steps required to run them in a new m5a.4xlarge aws instance with ubuntu 20.04.  But this is just for reference. It's better if you run your own hardware.
-
-### Preparation of the machine.
+In this tutorial I'll describe all the steps required to run them in a new m5a.4xlarge AWS instance with ubuntu 20.04. The actual cost of this instance at the moment of writing is 0.644$/h  But this is just for reference. Actually, it's better if you run your own hardware.
 
 You can use any machine to run the ceremony. The important part of the ceremony is that the toxic value is not leaked and it's deleted after the completion of the ceremony.
 
-This toxic value is in the memory while the ceremony is running. This toxic value is not displayed any where, and it's recomended to restart the machine after the ceremony is completed to be sure this toxic value is not accessible any more.
+This toxic value is in the memory while the ceremony is running. This toxic value is not displayed any where and it's not stored anywhere. It's recomended to restart the machine after the ceremony is completed to be sure this toxic value is not accessible any more.
 
-You can check the [phase1 perpetual powers of tau ceremony](https://github.com/weijiekoh/perpetualpowersoftau) used by Hermez for geting ideas.
+You can check the [phase1 perpetual powers of tau ceremony](https://github.com/weijiekoh/perpetualpowersoftau) used by Hermez for geting ideas of what to do to be sure the toxic walue is deleted.
+
+## Preparation of the machine.
 
 You will need node version at least v14. For reference we are using v14.8.0
 
-Quick instructions to install node:
+Quick instructions to install node if you don't have it:
 
 ````
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+source ~/.bashrc
+nvm install v14.8.0
+node --version
 ````
 
 Install snarkjs:
 
 ````bash
-npm install snarkjs
+npm install -g snarkjs
 ````
 
 At the begining of the contribution you will receive 3 files:
@@ -40,6 +43,12 @@ At the begining of the contribution you will receive 3 files:
 * `withdraw_hez1_xxxx.zkey`
 
 Where `xxxx` is the contribution of the last participant.
+
+````
+wget https://hermez.s3-eu-west-1.amazonaws.com/withdraw_hez1_xxxx.zkey
+wget https://hermez.s3-eu-west-1.amazonaws.com/circuit-376-32-256-64_hez1_xxxx.zkey
+wget https://hermez.s3-eu-west-1.amazonaws.com/circuit-2000-32-256-64_hez1_xxxx.zkey
+````
 
 Take note of the blake2b of the imputs and check with the ceremony coordinator the integrity of the files:
 ````bash
@@ -51,16 +60,16 @@ b2sum withdraw_hez1_xxxx.zkey
 To run the ceremony you need to run:
 
 ````bash
-snarkjs zkey contribute circuit-2000-32-256-64_hez1_xxxx.zkey circuit-2000-32-256-64_hez1_yyyy.zkey -v -n="Your name"
+snarkjs zkey contribute circuit-2000-32-256-64_hez1_xxxx.zkey circuit-2000-32-256-64_hez1_yyyy.zkey -v -n=yourName
 ````
 
-"Your name" is added in the file for reference. This is important because this name will be displayed with the contribution hash when all the contributions are listed in the fine zkey file.
+Substitute `yourName` for the name you want to appear in the file. Please do not uses spaces or special characters so we don't have problems.  This name is important because this is what will be displayed with the togethe with the contribution hash when all the contributions are listed in the fine zkey file verification.
 
 Substitute also `yyyy` by the actual contrubution.  This should be `xxxx` + 1.
 
 Write down the Circuit Hash and The Contribution Hash printed at the end.
 
-The circuit hash should be:
+The circuit hash for the 2000Txs circuit should be:
 
 ````
 71d82bff bd8538c2 3563e778 93fde8e7
@@ -69,11 +78,13 @@ c3370068 758209b6 cad7bd75 a6ec95dc
 79ed6e54 33088783 bab73475 96f6dafc
 ````
 
+This Hash is computed at the phase two preparation, and depends on the r1cs file and the powers of tau result ceremony.
+
 Do the same for the other two circuits:
 
-````
-snarkjs zkey contribute circuit-376-32-256-64_hez1_xxxx.zkey circuit-376-32-256-64_hez1_yyyy.zkey -v -n="Your name"
-snarkjs zkey contribute withdraw_hez1_xxxx.zkey withdraw_hez1_yyyy.zkey -v -n="Your name"
+````bash
+snarkjs zkey contribute circuit-376-32-256-64_hez1_xxxx.zkey circuit-376-32-256-64_hez1_yyyy.zkey -v -n=yourName
+snarkjs zkey contribute withdraw_hez1_xxxx.zkey withdraw_hez1_yyyy.zkey -v -n=yourName
 ````
 
 The circuit hash for `circuit-376-32-256-64` should be:
@@ -96,48 +107,50 @@ f6231eeb d3a3e47c c7745379 34b16062
 
 Write down the contribution hash for both circuits.
 
-Now you can checksum your contributions by running:
+Now you can compute the checksum of your contribution results.
 
-````
+````bash
 b2sum circuit-2000-32-256-64_hez1_yyyy.zkey
 b2sum circuit-375-32-256-64_hez1_yyyy.zkey
 b2sum withdraw_hez1_yyyy.zkey
 ````
 
-With this, you will have all the information to fill the atestation template.
+With this, you will have all the information to fill the attestation template.
 
-Create a copy of the [template file]() with name `yyyy_YourName_attestation.txt`
+Create a copy of the [template_attestation.md](template_attestation.md) with name `yyyy_yourName_attestation.txt`
 
 Fill all the fields of the template.
 
-Sign the template with a PGP key.
+Sign the template with a PGP key or Keybase.
 
-and generate a signed atestation with name:
-`yyyy_YourName_attestation_signed.txt`
+and generate a signed attestation with name:
+`yyyy_yourName_attestation_signed.txt`
 
 
 Send the 3 responses plus the signed attestation to the coordinator.
 
 You will be asked to do so by first create a ssh-key if you don't have it.
 
-````
-ssh-keygen
+````bash
+ssh-keygen -t rsa -q -f "$HOME/.ssh/id_rsa" -N ""
 ````
 
 Send the public key to the ceremony coordinator.
 You can see your public key by typing:
 
-````
+````bash
 cat ~/.ssh/id_rsa.pub
 ````
 
-Once the ceremony coordinator authorizes your key, you can upload the generated files and the signed atestation by doing:
+Once the ceremony coordinator authorizes your key, you can upload the generated files and the signed attestation by doing:
 
-````
-sftp YouName@s-628cadcefdfd40e39.server.transfer.us-east-1.amazonaws.com <<< $'put circuit-2000-32-256-64_hez1_yyyy.zkey'
-sftp YouName@s-628cadcefdfd40e39.server.transfer.us-east-1.amazonaws.com <<< $'put circuit-376-32-256-64_hez1_yyyy.zkey'
-sftp YouName@s-628cadcefdfd40e39.server.transfer.us-east-1.amazonaws.com <<< $'put withdraw_hez1_yyyy.zkey'
-sftp YouName@s-628cadcefdfd40e39.server.transfer.us-east-1.amazonaws.com <<< $'put yyyy_YourName_attestation_signed.txt'
+````bash
+sftp contributor_yyyy@s-628cadcefdfd40e39.server.transfer.us-east-1.amazonaws.com <<< $'put circuit-2000-32-256-64_hez1_yyyy.zkey'
+sftp contributor_yyyy@s-628cadcefdfd40e39.server.transfer.us-east-1.amazonaws.com <<< $'put circuit-376-32-256-64_hez1_yyyy.zkey'
+sftp contributor_yyyy@s-628cadcefdfd40e39.server.transfer.us-east-1.amazonaws.com <<< $'put withdraw_hez1_yyyy.zkey'
+sftp contributor_yyyy@s-628cadcefdfd40e39.server.transfer.us-east-1.amazonaws.com <<< $'put yyyy_YourName_attestation_signed.txt'
 ````
 
-Send also your PGP Key or a link to yout PGP keybase to the coordinator.
+Send also your public PGP Key or a link to yout PGP keybase to the coordinator.
+
+Thank you very much for contributing!
