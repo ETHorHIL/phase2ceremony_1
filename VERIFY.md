@@ -23,10 +23,17 @@ sudo swapon /dev/xvdb
 sudo sh -c "sed -i '/^\/dev\/xvdb/d' /etc/fstab"
 sudo sh -c 'echo "/dev/xvdb      swap        swap    defaults        0 0" >>/etc/fstab'
 
+sudo fallocate -l 400G /swapfile
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
 
 sudo sh -c 'echo "vm.max_map_count=10000000" >>/etc/sysctl.conf'
 sudo sh -c 'echo 10000000 > /proc/sys/vm/max_map_count'
 ````
+
+It's important to note that we need 2200G of memory adding RAM and swap. That's why we use the full local disk plus a 400G file.
+
 ## Compile a patched version of node
 
 First install node with nvm:
