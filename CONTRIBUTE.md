@@ -1,7 +1,7 @@
 
 # How to Contribute Guide
 
-Contact #trusted-setup-phase2-ceremony channel in the Hermez Discord to be added into the queue and coordinate the details.
+First of all, register yourself in [this form](https://forms.gle/P2Kwuqew94FosvWq5). We will add you at the #trusted-setup-phase2-ceremony channel in the Hermez Discord.
 
 You can also reach us in the [Hermez Telegram group](https://t.me/hermez_network).
 
