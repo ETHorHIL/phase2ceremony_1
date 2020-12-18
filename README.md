@@ -1,8 +1,8 @@
-# Hermez Network First Phase2 Trusted setup ceremony.
+# Hermez Network First Phase2 Trusted Setup Ceremony.
 
-This repository contains the transcript of the phase2 ceremony.
+This repository contains the transcript of the Phase2 Ceremony.
 
-This ceremony runs the trusted setup for 3 circuit:
+This ceremony runs the trusted setup for 3 circuits:
 
 * **circuit_circuit-2000-32-256-64**
 * **circuit_circuit-376-32-256-64**
@@ -12,7 +12,7 @@ The first two circuits are the validation circuits for 2000Tx and 376 Txs.  The 
 
 See [Hermez Documentation](https://docs.hermez.io/#/) for fore information of how the rollup works.
 
-The circom circuits can be found in [circuits](https://github.com/hermeznetwork/circuits).
+The Circom circuits can be found in [circuits](https://github.com/hermeznetwork/circuits).
 
 For this ceremony we used the tag `phase2ceremony_1` with commit value  `16f791efd259f2b158bc48b1911ab94ac1e53d36`
 
