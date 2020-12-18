@@ -1,6 +1,4 @@
-
-
-# Verification of the ceremony
+# Verification of the ceremony guide
 
 In order to verify the circuit, you will need a machine with tons of memory.
 
