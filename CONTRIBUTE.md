@@ -1,7 +1,7 @@
 
 # How to Contribute Guide
 
-First of all, register yourself in [this form](https://forms.gle/P2Kwuqew94FosvWq5). We will add you at the #trusted-setup-phase2-ceremony channel in the Hermez Discord.
+First of all, register yourself in [this form](https://forms.gle/P2Kwuqew94FosvWq5). We will add you to the #trusted-setup-phase2-ceremony channel in the Hermez Discord.
 
 You can also reach us in the [Hermez Telegram group](https://t.me/hermez_network).
 
@@ -15,7 +15,7 @@ You can use any machine to run the ceremony. The important part of the ceremony 
 
 This toxic value is in the memory while the ceremony is running. This toxic value is not displayed anywhere and it's not stored anywhere. It's recomended to restart the machine after the ceremony is completed to be sure this toxic value is not accessible any more.
 
-You can check the [phase1 perpetual powers of tau ceremony](https://github.com/weijiekoh/perpetualpowersoftau) used by Hermez for geting ideas of what to do to be sure the toxic walue is deleted.
+You can check the [Phase1 Perpetual Powers of Tau Ceremony](https://github.com/weijiekoh/perpetualpowersoftau) used by Hermez for geting ideas of what to do to be sure the toxic value is deleted.
 
 ## Preparation of the Machine.
 
@@ -63,7 +63,7 @@ To run the ceremony you need to run:
 snarkjs zkey contribute circuit-2000-32-256-64_hez1_xxxx.zkey circuit-2000-32-256-64_hez1_yyyy.zkey -v -n=yourName
 ````
 
-Substitute `yourName` for the name you want to appear in the file. Please do not uses spaces or special characters so we don't have problems.  This name is important because this is what will be displayed with the togethe with the contribution hash when all the contributions are listed in the fine zkey file verification.
+Substitute `yourName` for the name you want to appear in the file. Please do not uses spaces or special characters so we don't have problems.  This name is important because this is what will be displayed, together with the contribution hash when all the contributions are listed in the final zkey file verification.
 
 Substitute also `yyyy` by the actual contrubution.  This should be `xxxx` + 1.
 
@@ -129,7 +129,7 @@ And generate a signed attestation with name:
 
 Send the 3 responses plus the signed attestation to the coordinator.
 
-You will be asked to do so by first create a ssh-key if you don't have it.
+You will be asked to do so by first creating a ssh-key if you don't have it.
 
 ````bash
 ssh-keygen -t rsa -q -f "$HOME/.ssh/id_rsa" -N ""
