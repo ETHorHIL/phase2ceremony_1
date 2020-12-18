@@ -1,23 +1,23 @@
 
-# How to contribute guide
+# How to Contribute Guide
 
-Contact #trusted-setup-phase2-ceremony channel in the Hermez discord to be added into the queue and coordinate the details.
+Contact #trusted-setup-phase2-ceremony channel in the Hermez Discord to be added into the queue and coordinate the details.
 
 You can also reach us in the [Hermez Telegram group](https://t.me/hermez_network).
 
 ## Requirements
 
-A machine with 4 cores and 16Gb would do the work, but we recomend a bigger machine to process the ceremony faster.
+A machine with 4 cores and 16Gb would do the work, but we recommend a bigger machine to process the ceremony faster.
 
 In this tutorial I'll describe all the steps required to run them in a new m5a.4xlarge AWS instance with ubuntu 20.04. The actual cost of this instance at the moment of writing is 0.644$/h  But this is just for reference. Actually, it's better if you run your own hardware.
 
 You can use any machine to run the ceremony. The important part of the ceremony is that the toxic value is not leaked and it's deleted after the completion of the ceremony.
 
-This toxic value is in the memory while the ceremony is running. This toxic value is not displayed any where and it's not stored anywhere. It's recomended to restart the machine after the ceremony is completed to be sure this toxic value is not accessible any more.
+This toxic value is in the memory while the ceremony is running. This toxic value is not displayed anywhere and it's not stored anywhere. It's recomended to restart the machine after the ceremony is completed to be sure this toxic value is not accessible any more.
 
 You can check the [phase1 perpetual powers of tau ceremony](https://github.com/weijiekoh/perpetualpowersoftau) used by Hermez for geting ideas of what to do to be sure the toxic walue is deleted.
 
-## Preparation of the machine.
+## Preparation of the Machine.
 
 You will need node version at least v14. For reference we are using v14.8.0
 
@@ -50,7 +50,7 @@ wget https://hermez.s3-eu-west-1.amazonaws.com/circuit-376-32-256-64_hez1_xxxx.z
 wget https://hermez.s3-eu-west-1.amazonaws.com/circuit-2000-32-256-64_hez1_xxxx.zkey
 ````
 
-Take note of the blake2b of the imputs and check with the ceremony coordinator the integrity of the files:
+Take note of the blake2b of the inputs and check with the ceremony coordinator the integrity of the files:
 ````bash
 b2sum circuit-2000-32-256-64_hez1_xxxx.zkey
 b2sum circuit-375-32-256-64_hez1_xxxx.zkey
@@ -78,7 +78,7 @@ c3370068 758209b6 cad7bd75 a6ec95dc
 79ed6e54 33088783 bab73475 96f6dafc
 ````
 
-This Hash is computed at the phase two preparation, and depends on the r1cs file and the powers of tau result ceremony.
+This Hash is computed at the phase two preparation, and depends on the r1cs file and the Powers of Tau result ceremony.
 
 Do the same for the other two circuits:
 
@@ -123,7 +123,7 @@ Fill all the fields of the template.
 
 Sign the template with a PGP key or Keybase.
 
-and generate a signed attestation with name:
+And generate a signed attestation with name:
 `yyyy_yourName_attestation_signed.txt`
 
 
