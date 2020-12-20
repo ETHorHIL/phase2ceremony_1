@@ -20,9 +20,6 @@ sudo apt-get install tmux
 sudo mkswap -f /dev/xvdb
 sudo swapon /dev/xvdb
 
-sudo sh -c "sed -i '/^\/dev\/xvdb/d' /etc/fstab"
-sudo sh -c 'echo "/dev/xvdb      swap        swap    defaults        0 0" >>/etc/fstab'
-
 sudo fallocate -l 400G /swapfile
 sudo chmod 600 /swapfile
 sudo mkswap /swapfile
@@ -32,7 +29,7 @@ sudo sh -c 'echo "vm.max_map_count=10000000" >>/etc/sysctl.conf'
 sudo sh -c 'echo 10000000 > /proc/sys/vm/max_map_count'
 ````
 
-It's important to note that we need 2200G of memory adding RAM and swap. That's why we use the full local disk plus a 400G file.
+It's important to note that we need 2200G of memory adding RAM and swap together. That's why we use the full local disk plus a 400G file.
 
 ## Compile a patched version of node
 
@@ -236,6 +233,17 @@ this should be:
 5a68e88a 0d075415 eaf35d61 71c1eb8f
 fc28aa3f a5f8a6aa  7de5e6399c99c80d
 ````
+
+## install snarkjs
+
+````bash
+cd ~
+git clone https://github.com/iden3/snarkjs.git
+cd snarkjs
+git checkout v0.3.47
+npm install
+````
+
 ## Downloading and verifying powers of Tau
 
 First you will need to download the full powersOfTau file:
@@ -292,7 +300,7 @@ If we convert this unix time in seconds to readable time, it is Wednesday, 26 Au
 
 ##### 2000Tx circuit
 ````
-~/node/out/Release/node --trace-gc --trace-gc-ignore-scavenger --max-old-space-size=2048000 --initial-old-space-size=2048000 --no-global-gc-scheduling --no-incremental-marking --max-semi-space-size=1024 --initial-heap-size=2048000 --expose-gc ../../../snarkjs/cli.js zkv circuit-2000-32-256-64.r1cs ../../../powersOfTau28_hez_final.ptau circuit-2000-32-256-64_final.zkey -v >verification-2000.txt
+~/node/out/Release/node --trace-gc --trace-gc-ignore-scavenger --max-old-space-size=2048000 --initial-old-space-size=2048000 --no-global-gc-scheduling --no-incremental-marking --max-semi-space-size=1024 --initial-heap-size=2048000 --expose-gc ../../../snarkjs/cli.js zkv circuit-2000-32-256-64.r1cs ../../../powersOfTau28_hez_final.ptau circuit-2000-32-256-64_hez1_final.zkey -v >verification-2000.txt
 ````
 
 If you want to check an intermediary circuit, Substitute _final by the intermediary response you want.
@@ -303,7 +311,7 @@ As far as there is a single attestatation you trust, you can considere the cerem
 
 ##### 300Tx circuit
 ````
-~/node/out/Release/node --trace-gc --trace-gc-ignore-scavenger --max-old-space-size=2048000 --initial-old-space-size=2048000 --no-global-gc-scheduling --no-incremental-marking --max-semi-space-size=1024 --initial-heap-size=2048000 --expose-gc ../../../snarkjs/cli.js zkv circuit-376-32-256-64.r1cs ../../../powersOfTau28_hez_final.ptau circuit-376-32-256-64_final.zkey -v >verification-376.txt
+~/node/out/Release/node --trace-gc --trace-gc-ignore-scavenger --max-old-space-size=2048000 --initial-old-space-size=2048000 --no-global-gc-scheduling --no-incremental-marking --max-semi-space-size=1024 --initial-heap-size=2048000 --expose-gc ../../../snarkjs/cli.js zkv circuit-376-32-256-64.r1cs ../../../powersOfTau28_hez_final.ptau circuit-376-32-256-64_hez1_final.zkey -v >verification-376.txt
 ````
 
 You have to math also the contribution hashes of the participants with attestations they published.
