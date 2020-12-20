@@ -303,6 +303,14 @@ If we convert this unix time in seconds to readable time, it is Wednesday, 26 Au
 ~/node/out/Release/node --trace-gc --trace-gc-ignore-scavenger --max-old-space-size=2048000 --initial-old-space-size=2048000 --no-global-gc-scheduling --no-incremental-marking --max-semi-space-size=1024 --initial-heap-size=2048000 --expose-gc ../../../snarkjs/cli.js zkv circuit-2000-32-256-64.r1cs ../../../powersOfTau28_hez_final.ptau circuit-2000-32-256-64_hez1_final.zkey -v >verification-2000.txt
 ````
 
+The circuit hash must be:
+````
+71d82bff bd8538c2 3563e778 93fde8e7
+dea99f07 613a88a0 c6a286de 4decfb39
+c3370068 758209b6 cad7bd75 a6ec95dc
+79ed6e54 33088783 bab73475 96f6dafc
+````
+
 If you want to check an intermediary circuit, Substitute _final by the intermediary response you want.
 
 You can check all the contributions at the end of the `verification-2000.txt` file. You should check all the signatures of the transcript and see that the declared contribution hash of each particimat matches the ones here.
@@ -314,7 +322,15 @@ As far as there is a single attestatation you trust, you can considere the cerem
 ~/node/out/Release/node --trace-gc --trace-gc-ignore-scavenger --max-old-space-size=2048000 --initial-old-space-size=2048000 --no-global-gc-scheduling --no-incremental-marking --max-semi-space-size=1024 --initial-heap-size=2048000 --expose-gc ../../../snarkjs/cli.js zkv circuit-376-32-256-64.r1cs ../../../powersOfTau28_hez_final.ptau circuit-376-32-256-64_hez1_final.zkey -v >verification-376.txt
 ````
 
-You have to math also the contribution hashes of the participants with attestations they published.
+The hash of the circuit must be:
+````
+d357a1ec f80bbc0e ba06ae34 4a40c688
+79026153 c5a1c550 28b6ac02 3789d26c
+b3c59f9b eb74cd2e 13f7ce35 7f2b18fd
+08dc9f7f 1abf46f6 98f6a5c4 a8b2ce98
+````
+
+You have to match also the contribution hashes of the participants with attestations they published.
 
 As far as there is a single attestatation you trust, you can considere the ceremony for this circuit safe.
 
@@ -323,7 +339,15 @@ As far as there is a single attestatation you trust, you can considere the cerem
 ~/node/out/Release/node --trace-gc --trace-gc-ignore-scavenger --max-old-space-size=2048000 --initial-old-space-size=2048000 --no-global-gc-scheduling --no-incremental-marking --max-semi-space-size=1024 --initial-heap-size=2048000 --expose-gc ../../../snarkjs/cli.js zkv withdraw_main.r1cs ../../../powersOfTau28_hez_final.ptau withdraw_final.zkey -v >verification-withdraw.txt
 ````
 
-You have to math also the contribution hashes of the participants with attestations they published.
+The hash of the circuit must be:
+````
+ec15023b 4b03e104 a8b8f620 e48b6f8a
+f6231eeb d3a3e47c c7745379 34b16062
+301a0ad3 91d56c7e cf98b8d3 28f231f5
+42f67e89 893e2b21 277e7019 55020b8c
+````
+
+You have to match also the contribution hashes of the participants with attestations they published.
 
 As far as there is a single attestatation you trust, you can considere the ceremony for this circuit safe.
 
