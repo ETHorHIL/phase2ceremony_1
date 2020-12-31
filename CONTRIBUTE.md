@@ -38,9 +38,9 @@ npm install -g snarkjs
 
 At the begining of the contribution you will receive 3 files:
 
-* `circuit-2000-32-256-64_hez1_xxxx.zkey`
-* `circuit-376-32-256-64_hez1_xxxx.zkey`
-* `withdraw_hez1_xxxx.zkey`
+* `circuit-2000-32-256-64_hez1_xxxx.zkey` (60GB)
+* `circuit-376-32-256-64_hez1_xxxx.zkey`  (15GB)
+* `withdraw_hez1_xxxx.zkey` (50MB)
 
 Where `xxxx` is the contribution of the last participant.
 
